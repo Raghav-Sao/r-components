@@ -9,7 +9,7 @@ class Alert extends Component {
 		return (
 			<div>
 				{show && (
-					<div className={cn(true ? style : '', type)}>
+					<div className={cn(style, type)}>
 						{children}
 						{toggle && (
 							<span
@@ -25,7 +25,7 @@ class Alert extends Component {
 }
 
 Alert.propTypes = {
-	color: propTypes.oneOf(['success', 'error', 'info']),
+	type: propTypes.oneOf(['success', 'error', 'info']),
 	show: propTypes.bool.isRequired,
 	toggle: propTypes.func.isRequired,
 };

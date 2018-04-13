@@ -1,5 +1,5 @@
 import { css } from 'emotion';
-import { colors } from '../../styles/colors.js';
+import colors from '../../styles/colors.js';
 
 const style = css`
 	background: red;
@@ -17,7 +17,7 @@ const style = css`
 		background: yellow;
 	}
 	&.success {
-		background: ${colors.green};
+		background: ${colors.success};
 	}
 	& .icon-close {
 		cursor: pointer;

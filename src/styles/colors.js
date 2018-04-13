@@ -1,4 +1,8 @@
-export const colors = {
+const colors = {
+	error: '#f44336',
+	info: '#FFB300',
+	success: '#27AE60',
 	white: '#FFFFFF',
-	green: '#27AE60',
 };
+
+export default colors;

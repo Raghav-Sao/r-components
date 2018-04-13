@@ -4,11 +4,17 @@ import Alert from '../components/Alert';
 
 class App extends React.Component {
   state = {
-    show: true,
+    alert: {
+      show: true,
+      text: 'Alert is Coooolllllllll',
+    },
   };
   dismissAlert = () => {
     this.setState({
-      show: false,
+      alert: {
+        ...this.state.alert,
+        show: false,
+      },
     });
   };
 
@@ -16,8 +22,8 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <Alert type="success" show={this.state.show} toggle={this.dismissAlert}>
-            My alert
+          <Alert type="success" show={this.state.alert.show} toggle={this.dismissAlert}>
+            {this.state.alert.text}
           </Alert>
         </div>
       </div>
